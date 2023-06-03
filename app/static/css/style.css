@@ -1,0 +1,601 @@
+body{
+    width: 99vw;
+    height: 90vh;
+    background-color: #7371FC;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #7371FC;
+}
+.custom-background {
+    background-color: #7371FC;
+}
+
+.logo-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+.main-form-div{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    height: 20vh;
+}
+#logo-sml{
+    height: 10vh;
+}
+.main-form{
+    width: 70vw;
+    height: 55vh;
+    background-color: #A594F9;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.main-form-nav{
+    display: flex;
+}
+.nav-tab{
+    display: flex;
+    width: 50%;
+    height: 20%;
+}
+.selected-nav-tab{
+    background-color: #8e73fb;
+    color: white;
+}
+.other-nav-tab{
+    background-color: #A594F9;
+    color: white;
+}
+.other-nav-tab:hover{
+    background-color: #886afe;
+    transition: 0.2s;
+}
+.other-nav-tab a{
+    width: 100%;
+    height: 90%;
+    text-decoration: none;
+    color: white;
+}
+.nav-tab p{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Baloo 2;
+    font-size: xxx-large;
+    font-weight:1000;
+}
+.selected-nav-tab p{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Baloo 2;
+    font-size: xxx-large;
+    font-weight: 1000;
+}
+.home-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.home-form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-form-input{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    font-family: Baloo 2;
+    width: 30vw;
+}
+.home-form-select {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 15vw;
+    font-family: Baloo 2;
+}
+.home-form-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    white-space: nowrap;
+    font-family: Baloo 2;
+    margin: 5%;
+    row-gap: 2vh;
+}
+.home-buttons{   
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+}
+.home-button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7E8A4;
+    border-radius: 20px;
+    padding: 20%;
+    padding-left: 200%;
+    padding-right: 200%;
+    margin: 10%;
+    color: #2d1467;
+    font-size: 40px;
+    font-family: Baloo 2;
+    font-weight: 1000;
+    border: 0;
+    cursor: pointer;
+}
+
+.home-button:hover{
+    background-color: #ffd828;
+    transition: 0.5s;
+}
+
+.lobby-container{
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    background-color: #A594F9;
+    border-radius: 50px;
+    overflow: hidden;
+    color: white;
+}
+.lobby-top-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 12vw;
+    font-family: Baloo 2;
+    background-color: #8e73fb;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.lobby-heading-font{
+    margin-top: 15px;
+    font-size: 20px;
+}
+.lobby-code-font{
+    font-size: 45px;
+}
+.lobby-player-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20%;
+    width: 60vw;
+    height: 25vh;
+    margin: auto;
+    margin-top: 3%;
+    font-family: Baloo 2;
+    background-color: #8e73fb;
+    border-radius: 10px;
+}
+.player-space{
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    width: 20vw;
+    height: 5vh;
+    background-color: #7452ff;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.reverse-direction{
+    flex-direction: row-reverse;
+}
+.player-info{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Baloo 2;
+    font-size: 22px;
+    margin: auto;
+    padding-top: 1vh;
+}
+.ready-indicator{
+    width: 3vw;
+    height: 5vh;
+    border-radius: 5px 0 0 5px;
+    background-color: rgb(255, 52, 52);
+}
+.ready-indicator-reverse{
+    width: 3vw;
+    height: 5vh;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(255, 52, 52);
+}
+.lobby-button-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2.5vh;
+}
+.lobby-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7E8A4;
+    border-radius: 20px;
+    color: #2d1467;
+    font-size: 40px;
+    font-family: Baloo 2;
+    font-weight: 1000;
+    border: 0;
+    cursor: pointer;
+    width: 20vw;
+}
+.lobby-button:hover{
+    background-color: #ffd828;
+    transition: 0.5s;
+}
+
+canvas {
+    border: 8px solid #A594F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#logo-sml-canva {
+    position: absolute;
+    width: 12vw;
+    top: 2%;
+    right: 3%;
+}
+.sketch-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.work-area {
+    display: flex;
+    justify-content: center;
+}
+.canva-with-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sketch-task-text {
+    color: white;
+    flex-grow: 2;
+    font-family: Baloo 2;
+    font-size: 3vh;
+    text-align: center;
+}
+.canvas-holder {
+    border-radius: 10px;
+    margin-right: 2%;
+}
+.tool-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 3px;
+}
+.timer {
+    font-family: Baloo 2;
+    font-size: 40px;
+    color: white;
+}
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20%;
+    background: #A594F9;
+    border-radius: 10px;
+    height: 605.33px;
+    width: 16vw;
+}
+.tool-buttons-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+.tool-name {
+    color: white;
+    font-family: Baloo 2;
+    font-size: 25px;
+}
+.tool-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    font-size: x-large;
+}
+.tool-button {
+    background-color: #8e73fb;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+.tool-button:hover{
+    background-color: #7452ff;
+    transition: 0.5s;
+}
+.tool-buttons-special {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 5%;
+    row-gap: 5%;
+    width: 50px;
+    height: 50px;
+    font-size: x-large;
+}
+.tool-buttons-row-one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1%;
+}
+.tool-buttons-row-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.canva-submit-button-div{
+    margin-right: 25%;
+}
+.canva-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7E8A4;
+    border-radius: 20px;
+    color: #2d1467;
+    font-size: 40px;
+    font-family: Baloo 2;
+    font-weight: 1000;
+    border: 0;
+    cursor: pointer;
+    width: 20vw;
+}
+.canva-submit-button:hover{
+    background-color: #ffd828;
+    transition: 0.5s;
+}
+.color-picker-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+
+.voting-area-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65vw;
+    height: 85vh;
+    background-color: #A594F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.carousel{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1%;
+}
+#drawing1{
+    width: 45vw;
+    height: auto;
+}
+#drawing2{
+    width: 45vw;
+    height: auto;
+}
+#drawing3{
+    width: 45vw;
+    height: auto;
+}
+#drawing4{
+    width: 45vw;
+    height: auto;
+}
+#drawing5{
+    width: 45vw;
+    height: auto;
+}
+#drawing6{
+    width: 45vw;
+    height: auto;
+}
+#drawing7{
+    width: 45vw;
+    height: auto;
+}
+#drawing8{
+    width: 45vw;
+    height: auto;
+}
+.carousel-item {
+    transition: transform 2s ease-in-out;
+  }
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 2s;
+  }
+.vote-slider-div {
+    width: 12vw;
+    margin-top: 3%;
+}
+.vote-slider {
+    scale: 200%;
+}
+.vote-number {
+    color: white;
+    font-family: Baloo 2;
+    font-size: 50px;
+}
+.next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7E8A4;
+    border-radius: 20px;
+    color: #2d1467;
+    font-size: 40px;
+    font-family: Baloo 2;
+    font-weight: 1000;
+    border: 0;
+    cursor: pointer;
+    width: 20vw;
+}
+.next-button:hover{
+    background-color: #ffd828;
+    transition: 0.5s;
+}
+.waiting-spinner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10%;
+    color: white; 
+    font-size:50px
+}
+
+
+.results-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65vw;
+    height: 85vh;
+    background-color: #A594F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.holder-div {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 45vh;
+    background-color: #8e73fb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.prompt-text {
+    color: white;
+    font-family: Baloo 2;
+    font-size: 2vh;
+    text-align: center;
+}
+.final-image-holder {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #8e73fb;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    font-size: 15px;
+    margin-top: 1%;
+    column-gap: 3%;
+    margin-bottom: 1%;
+}
+.stage-drawing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1%;
+    margin-top: 1%;
+}
+#final_image {
+    width: 28vw;
+    height: auto;
+}
+#first_drawing_image {
+    width: 10vw;
+    height: auto;
+}
+#second_drawing_image {
+    width: 10vw;
+    height: auto;
+}
+#third_drawing_image {
+    width: 10vw;
+    height: auto;
+}
+.back-home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7E8A4;
+    border-radius: 20px;
+    color: #2d1467;
+    font-size: 40px;
+    font-family: Baloo 2;
+    font-weight: 1000;
+    border: 0;
+    cursor: pointer;
+    width: 20vw;
+}
+.back-home-btn:hover{
+    background-color: #ffd828;
+    transition: 0.5s;
+}

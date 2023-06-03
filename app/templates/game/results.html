@@ -1,0 +1,48 @@
+{% extends "game/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <h1>{% block title %} Results | IdeDraw {% endblock title %}</h1>
+{% endblock head %}
+
+{% block content %}
+<div class="logo-div-small">
+  <a href="{{url_for('home.play')}}">
+    <img src="..\static\icons\IdeaDraw_Logo.png" id="logo-sml-canva">
+  </a>
+</div>
+<div class="container">
+    <div class="results-div">
+      <div class="holder-div">
+        <div class="prompt-text">
+          <p id="prompt"></p>
+        </div>
+        <div class="final-image-holder">
+          <img src="" id="final_image">
+        </div>
+      </div>
+      <div class="progress-div">
+        <div class="stage-drawing">
+          <p>FIRST SKETCH</p>
+          <img src="" id="first_drawing_image">
+          <p id="first_drawing_author"></p>
+          <p id="first_drawing_vote"></p>
+        </div>
+        <div class="stage-drawing">
+          <p>SECOND SKETCH</p>
+          <img src="" id="second_drawing_image">
+          <p id="second_drawing_author"></p>
+          <p id="second_drawing_vote"></p>
+        </div>
+        <div class="stage-drawing">
+          <p>PAINTING</p>
+          <img src="" id="third_drawing_image">
+          <p id="third_drawing_author"></p>
+          <p id="third_drawing_vote"></p>
+        </div>
+      </div>
+      <button class="back-home-btn" type="button" id="back_home_button">PLAY AGAIN</button>
+    </div>
+</div>
+<script src="{{url_for('static', filename='javascript/results.js')}}"></script>
+{% endblock content %}

@@ -1,0 +1,125 @@
+{% extends "game/base.html" %} {% block head %} {{ super() }}
+<h1>{% block title %} Draw | IdeDraw {% endblock title %}</h1>
+{% endblock head %} {% block content %}
+<div class="logo-div-small">
+  <a href="{{url_for('home.play')}}">
+    <img src="..\static\icons\IdeaDraw_Logo.png" id="logo-sml-canva" />
+  </a>
+</div>
+<div class="container">
+  <div class="sketch-area" id="sketch_area">
+    <div class="work-area">
+      <div class="canva-with-task">
+        <div class="sketch-task-text">
+          <p id="prompt">This is some text, that you should sketch</p>
+        </div>
+        <div class="canvas-holder" id="canvas_holder"></div>
+      </div>
+      <div class="tool-box">
+        <div class="timer">
+          <p id="timer"></p>
+        </div>
+        <div class="tools">
+          <div class="tool-buttons-div">
+            <div class="tool-name">
+              <p>BRUSH SIZE</p>
+            </div>
+            <div class="tool-buttons">
+              <button class="tool-button" type="button" id="small_brush_size">
+                <img src="..\static\icons\small.png" width="65vw" height="65" />
+              </button>
+              <button class="tool-button" type="button" id="medium_brush_size">
+                <img
+                  src="..\static\icons\average.png"
+                  width="65vw"
+                  height="65vh"
+                />
+              </button>
+              <button class="tool-button" type="button" id="big_brush_size">
+                <img src="..\static\icons\big.png" width="65vw" height="65vh" />
+              </button>
+            </div>
+          </div>
+          <div class="tool-buttons-div">
+            <div class="tool-name">
+              <p>TRANSPARENCY</p>
+            </div>
+            <div class="tool-buttons">
+              <button class="tool-button" type="button" id="light">
+                <img
+                  src="..\static\icons\light.png"
+                  width="65vw"
+                  height="65vh"
+                />
+              </button>
+              <button class="tool-button" type="button" id="medium">
+                <img src="..\static\icons\medium.png" width="65vw" height="65vh"
+                background: transparent;>
+              </button>
+              <button class="tool-button" type="button" id="dark">
+                <img src="..\static\icons\dark.png" width="65vw" height="65vh"
+                background: transparent;>
+              </button>
+            </div>
+          </div>
+          <div class="tool-buttons-div">
+            <div class="tool-name">
+              <p>TOOLS</p>
+            </div>
+            <div class="tool-buttons-special">
+              <div class="tool-buttons-row-one">
+                <button class="tool-button" type="button" id="undo">
+                  <img
+                    src="..\static\icons\undo.png"
+                    width="65vw"
+                    height="65vh"
+                  />
+                </button>
+                <button class="tool-button" type="button" id="redo">
+                  <img
+                    src="..\static\icons\redo.png"
+                    width="65vw"
+                    height="65vh"
+                  />
+                </button>
+                <button class="tool-button" type="button" id="erase">
+                  <img
+                    src="..\static\icons\erase.png"
+                    width="65vw"
+                    height="65vh"
+                  />
+                </button>
+              </div>
+              <div class="tool-buttons-row-two">
+                <button class="tool-button" type="button" id="delete">
+                  <img
+                    src="..\static\icons\trash.png"
+                    width="65vw"
+                    height="65vh"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="canva-submit-button-div">
+      <button class="canva-submit-button" id="submit" , type="submit">
+        SUBMIT
+      </button>
+    </div>
+  </div>
+  <div id="wait_for_others" class="waiting-spinner" style="display: none">
+    <div
+      class="spinner-border"
+      style="width: 10rem; height: 10rem; color: white"
+      role="status"
+    ></div>
+    <div>
+      <p>Waiting for other players...</p>
+    </div>
+  </div>
+  <script src="{{url_for('static', filename='javascript/draw.js')}}"></script>
+</div>
+{% endblock content %}

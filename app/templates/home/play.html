@@ -1,0 +1,44 @@
+{% extends "home/home_base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <h1>{% block title %}Create lobby | IdeaDraw{% endblock title %}</h1>
+{% endblock head %}
+
+{% block content %}
+<div class="logo-div">
+    <img src="..\static\icons\IdeaDraw_Logo.png" id="logo">
+</div>
+
+<div class="main-form-div">
+  <div class="main-form">
+    <div class="main-form-nav">
+        <div class="nav-tab selected-nav-tab">
+            <p>Create lobby</p>
+        </div>
+        <div class="nav-tab other-nav-tab">
+            <a href="{{ url_for('home.join') }}">
+                <p>Join lobby</p>
+            </a>
+        </div>
+    </div>
+    <form method="POST" class="home-form">
+        {{ play_form.csrf_token }}
+        {{ play_form.hidden_tag() }}
+        <div class="home-form-div">
+            <div class="home-form-label">
+                {{ play_form.username.label() }}
+                {{ play_form.round_length.label() }}
+            </div>
+            <div class="home-form-label">
+                {{ play_form.username(class="home-form-input") }}
+                {{ play_form.round_length(class="home-form-select") }}
+            </div>
+        </div>
+        <div class="home-button-div">
+            {{ play_form.submit(class="home-button") }}
+        </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "home/home_base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <h1>{% block title %}Lobby | IdeaDraw{% endblock title %}</h1>
+    <script type="text/javascript">
+        var player_id = '{{ data }}'
+        sessionStorage.setItem("player_id", player_id)
+    </script>
+{% endblock head %}
+
+{% block content %}
+<div class="logo-div">
+    <img src="..\static\icons\IdeaDraw_Logo.png" id="logo">
+</div>
+
+<div class="lobby-container">
+    <div class="lobby-top-container">
+        <div class="lobby-heading-font">
+            <p>Lobby code</p>
+        </div>
+        <div class="lobby-code-font">
+            <p id="lobby_code">XXXXX</p>
+        </div>
+    </div>
+    <div class="lobby-player-div">
+        <div class="player-column">
+            <div class="player-space">
+                <div class="ready-indicator" id="p1_indicator"></div>
+                <div class="player-info">
+                    <p id="p1name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space">
+                <div class="ready-indicator" id="p2_indicator"></div>
+                <div class="player-info">
+                    <p id="p2name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space">
+                <div class="ready-indicator" id="p3_indicator"></div>
+                <div class="player-info">
+                    <p id="p3name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space">
+                <div class="ready-indicator" id="p4_indicator"></div>
+                <div class="player-info">
+                    <p id="p4name">Empty</p>
+                </div>
+            </div>
+        </div>
+        <div class="player-column">
+            <div class="player-space reverse-direction">
+                <div class="ready-indicator-reverse" id="p5_indicator"></div>
+                <div class="player-info">
+                    <p id="p5name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space reverse-direction">
+                <div class="ready-indicator-reverse" id="p6_indicator"></div>
+                <div class="player-info">
+                    <p id="p6name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space reverse-direction">
+                <div class="ready-indicator-reverse" id="p7_indicator"></div>
+                <div class="player-info">
+                    <p id="p7name">Empty</p>
+                </div>
+            </div>
+            <div class="player-space reverse-direction">
+                <div class="ready-indicator-reverse" id="p8_indicator"></div>
+                <div class="player-info">
+                    <p id="p8name">Empty</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lobby-button-div">
+        <button class="lobby-button" id="start" hidden>START</button>
+    </div>
+    <div class="lobby-button-div">
+        <button class="lobby-button" id="ready" hidden>READY</button>
+    </div>
+</div>
+<script src="{{url_for('static', filename='javascript/lobby.js')}}"></script>
+{% endblock content %}
